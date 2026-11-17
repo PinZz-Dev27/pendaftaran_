@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #0f172a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.no-print {
+    margin-bottom: 25px;
+    display: flex;
+    gap: 12px;
+}
+
+.btn-print {
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-print:hover {
+    background: #4338ca;
+}
+
+.btn-back {
+    background: #e2e8f0;
+    color: #334155;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-back:hover {
+    background: #cbd5e1;
+}
+
+/* CARD DESIGN */
+.card-container {
+    width: 100%;
+    max-width: 650px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 2px solid #cbd5e1;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.card-topbar {
+    background: linear-gradient(135deg, #1e1b4b, #312e81, #4338ca);
+    color: #fff;
+    padding: 24px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar-left h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.topbar-left p {
+    font-size: 0.82rem;
+    color: #a5b4fc;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+}
+
+.reg-number {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-align: right;
+}
+
+.reg-number span {
+    font-size: 0.72rem;
+    display: block;
+    color: #c7d2fe;
+    text-transform: uppercase;
+}
+
+.reg-number strong {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.15rem;
+    color: #fff;
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.game-banner {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.game-icon-box {
+    width: 55px;
+    height: 55px;
+    background: #e0e7ff;
+    color: #4338ca;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+.game-info-text h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1e1b4b;
+}
+
+.game-badges {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.badge-purple { background: #ede9fe; color: #6d28d9; }
+.badge-blue { background: #e0f2fe; color: #0369a1; }
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.detail-item {
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 8px;
+}
+
+.detail-item label {
+    display: block;
+    font-size: 0.75rem;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.detail-item p {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 2px;
+}
+
+.card-footer {
+    border-top: 2px dashed #e2e8f0;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barcode-sim {
+    font-family: monospace;
+    letter-spacing: 4px;
+    font-size: 1.3rem;
+    color: #334155;
+    font-weight: 800;
+}
+
+.seal {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.seal strong {
+    display: block;
+    color: #0f172a;
+    margin-top: 4px;
+}
+
+@media print {
+    body {
+        background: #fff;
+        padding: 0;
+    }
+    .no-print {
+        display: none;
+    }
+    .card-container {
+        box-shadow: none;
+        border: 1px solid #000;
+        margin: 20px auto;
+    }
+}
